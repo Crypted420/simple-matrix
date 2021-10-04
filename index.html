@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix</title>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="font9/font.css">
+    <link rel="stylesheet" href="fonts/font.css"> -->
+    <link rel="stylesheet" href="media.css">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <!-- Page header -->
+    <header>
+        <p>MATRIX</p>
+    </header>
+
+    <!-- Start of answer container -->
+    <aside id="soln-container">
+        <div class="display">
+            <div class="soln-box">
+                <div class="soln">
+                    <p>Solution & Explaination <i class="bi bi-x-circle-fill close"></i></p>
+
+                    <div class="type">
+
+                        <div class="D2by2 xp1">
+                            <div class="explain">
+                                <h3>Determinant of 2 by 2 Matrix</h3>
+                                <p class="words">
+                                    <i>Det = (A . D) - (B . C)</i><br>
+                                    The equation is used to find the determinant of a 2-by-2 matrix. To find the
+                                    determinant, you first multiply the element from the top left to the bottom right
+                                    corner and subtract the product from the top right to the bottom left. The
+                                    determinant is most often used to find the nature of Solution off the system of
+                                    linear equations defined by the matrix. This equation is only used for a 2 by 2
+                                    matrix, it cannot be used for matrices that are 3 by 3, 4 by 4 etc.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="D3by3 xp1">
+                            <div class="explain">
+                                <iframe src="https://www.mathcentre.ac.uk/resources/uploaded/sigma-matrices9-2009-1.pdf"
+                                    frameborder="0" width="100%" height="100%"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="T2by2 xp2">
+                            <div class="answer">
+                                <div class="trans2">
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer2input1">
+                                    </div>
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer2input2">
+                                    </div>
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer2input3">
+                                    </div>
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer2input4">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="explain">
+                                <h3>Transpose of a matrix:</h3>
+                                <p class="words">Suppose 𝐴
+                                    is any matrix, if the rows and columns are
+                                    interchanged the resulting matrix is called the
+                                    transpose of matrix 𝐴 denoted 𝐴<sup>𝑇</sup>
+                                    . (i.e. row 1
+                                    becomes column 1, row 2 becomes column 2
+                                    e.t.c.)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="T3by3 xp2">
+                            <div class="answer">
+
+                                <div class="trans3 ">
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer3input1">
+                                    </div>
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer3input2">
+                                    </div>
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer3input3">
+                                    </div>
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer3input4">
+                                    </div>
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer3input5">
+                                    </div>
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer3input6">
+                                    </div>
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer3input7">
+                                    </div>
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer3input8">
+                                    </div>
+                                    <div class="mtr1">
+                                        <input type="number" max="5" class="answer3input9">
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="explain">
+                                <h3>Transpose of a matrix:</h3>
+                                <p class="words">Suppose 𝐴
+                                    is any matrix, if the rows and columns are
+                                    interchanged the resulting matrix is called the
+                                    transpose of matrix 𝐴 denoted 𝐴<sup>𝑇</sup>
+                                    . (i.e. row 1
+                                    becomes column 1, row 2 becomes column 2
+                                    e.t.c.)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- End of answer container -->
+
+    <!-- Start of main content -->
+    <section>
+
+        <!-- Start Calculation options -->
+        <div class="options">
+            <button class="opt" id="opt1">Determinant 2 x 2</button>
+            <button class="opt" id="opt2">Determinant 3 x 3 </button>
+            <button class="opt" id="opt3">Transpose 2 x 2</button>
+            <button class="opt" id="opt4">Transpose 3 x 3</button>
+            </p>
+        </div>
+        <!-- End Calculation options -->
+
+
+        <div class="calc">
+            <!-- Start of Matrix table -->
+            <div class="matrix-table">
+                <!-- Determninant for 2 by 2 -->
+                <div class="fakedt2">
+                    <p class="view">View Explaination</p>
+                    <div class="det2">
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det2input1">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det2input2">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det2input3">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det2input4">
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Determninant for 2 by 2 -->
+
+                <!-- Start of Determninant for 3 by 3 -->
+
+                <div class="fakedt3">
+                    <p class="view view2">View Explaination</p>
+                    <div class="det3">
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det3input1">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det3input2">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det3input3">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det3input4">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det3input5">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det3input6">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det3input7">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det3input8">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="det3input9">
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Determninant for 3 by 3 -->
+
+                <!-- Start of Transpose for 2 by 2 -->
+                <div class="faketrans2">
+                    <!-- <p class="title">Transpose of 2 x 2 matrix</p> -->
+                    <div class="trans2">
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans2input1">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans2input2">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans2input3">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans2input4">
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Transpose for 2 by 2 -->
+
+                <!-- Start of Transpose for 3 by 3 -->
+                <div class="faketrans3 ">
+                    <!-- <p class="title">Transpose of 3 x 3 matrix</p> -->
+                    <div class="trans3 ">
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans3input1">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans3input2">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans3input3">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans3input4">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans3input5">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans3input6">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans3input7">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans3input8">
+                        </div>
+                        <div class="mtr1">
+                            <input type="number" max="5" class="trans3input9">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End of Transpose for 3 by 3 -->
+
+            </div>
+
+            <div class="matrix-soln">
+                <button id="answer1" class="answers">|A|</button>
+                <button id="answer2" class="answers">|A|</button>
+                <button id="answer3" class="answers">A<sup>T</sup></button>
+                <button id="answer4" class="answers">A<sup>T</sup></button>
+            </div>
+
+        </div>
+    </section>
+</body>
+<script src="main.js"></script>
+<script src="transition.js"></script>
+
+</html>

@@ -1,0 +1,965 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100;400&family=Poppins:wght@100;200;300&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400&display=swap');
+:root{
+    --pageBackground: black;
+    --borderColor: #111029;
+    --textColor:#fff;
+    --fontFamilyMain:'Poppins';
+    --fontFamilyOther:'Big Shoulders Stencil Text'; 
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body, html{
+    width:100%;
+    height:100%;
+    user-select: none;
+}
+body{
+    font-family: var(--fontFamilyMain);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+aside{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0, 0.8);
+    position:fixed;
+    display:none;
+    z-index:200;
+}
+aside .display{
+    width:100%;
+    height:90%;
+    display:block;
+}
+aside .display .soln-box{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+aside .display .soln-box > .soln{
+        width:40%;
+        height:80%;
+        background:white;
+        border-radius:5px;
+}
+aside .display .soln-box > .soln > p{
+    width:100%;
+    padding:10px;
+    border-bottom:2px solid black;
+    font-size:20px;
+    font-weight:700;
+}
+aside .display .soln-box > .soln > p > i{
+    color:black;
+    display:inline-block;
+    float:right;
+    font-size:25px;
+}
+aside .display .soln-box .soln .type{
+    width:100%;
+    height:100%;
+    border-radius:0 0 5px 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+aside .display .soln-box .soln .type > div{
+    width:100%;
+    height:100%;
+    border-radius:0 0 5px 5px;
+}
+aside .display .soln-box .soln .type .xp1 > .explain{
+    width:100%;
+    height:100%;
+    border-radius:0;
+    background:white;
+    padding:20px;
+    overflow-y:auto;
+    border-radius:inherit;
+}
+aside .display .soln-box .soln .type .xp2 > .answer{
+    width:100%;
+    height:30%;
+    border-radius:0px;
+    background:white;
+    padding:20px;
+}
+aside .display .soln-box .soln .type .xp2 > .explain{
+    width:100%;
+    height:70%;
+    padding:20px 40px 0px 40px;
+    border-radius:inherit;
+    text-align:justify;
+    overflow-y:auto;
+}
+h3{
+    text-decoration: underline;
+}
+.words{
+    line-height:40px;
+    padding-top:10px;
+}
+aside .display .soln-box .soln .type > .D2by2{
+    display:block;
+}
+
+aside .display .soln-box .soln .type > .D3by3{
+    background:white;
+    display:none;
+}
+aside .display .soln-box .soln .type > .T2by2{
+    overflow:hidden;
+    display:none;
+}
+aside .display .soln-box .soln .type .T2by2 .answer > .trans2{
+    width:40%;
+    height:100%;
+    border-left:2px solid black;
+    border-right:2px solid black;
+    border-radius:10px;
+    display:grid;
+    grid-column-gap: 5px;
+    grid-template-columns: auto auto;
+    margin:0% 30% auto;
+    position: relative;
+}
+aside .display .soln-box .soln .type .T2by2 .answer .trans2 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+aside .display .soln-box .soln .type .T2by2 .answer .trans2 .mtr1 > input{
+    width:50%;
+    height:40%;
+    outline:none;
+    border:0;
+    padding:5px;
+    border-bottom: 1px solid gray;
+}
+aside .display .soln-box .soln .type > .T3by3{
+    display:none;
+}
+
+aside .display .soln-box .soln .type .T3by3 .trans3{
+    display:grid;
+    width:40%;
+    height:100%;
+    border-left:2px solid black;
+    border-right:2px solid black;
+    border-radius:10px;
+    grid-column-gap: 0px;
+    grid-template-columns: auto auto auto;
+    padding:0;
+    margin:0% 30%;
+}
+
+aside .display .soln-box .soln .type .T3by3 .answer .trans3 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+aside .display .soln-box .soln .type .T3by3 .answer .trans3 .mtr1 > input{
+    width:60%;
+    height:60%;
+    outline:none;
+    border:0;
+    border-bottom: 2px dashed black;
+}
+
+header{
+    font-family:var(--fontFamilyOther);
+    width:100%;
+    height:15%;
+    padding:10px;
+    background:black;
+    color:var(--textColor);
+    box-shadow: 0px 1px 2px lightgray;
+}
+header > p {
+    font-size:3.6rem;
+    text-align:center;
+    letter-spacing:20px;
+}
+
+section{
+    width:100%;
+    height:85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section .calc{
+    width:100%;
+    height:100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section .options{
+    width:30%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction: column;
+    white-space: nowrap;
+    overflow-y: scroll;
+    /* box-shadow:2px 1px 2px lightgray, 1px 0px 4px gray; */
+    border-radius:1px;
+    border-right:2px solid black;
+}
+section .options .opt{
+    border:1px solid var(--borderColor);
+    text-align:center;
+    width:60%;
+    height:50px;
+    font-family:var(--fontFamilyMain);
+    outline:none;
+    background:white;
+    border:2px solid black;
+    border-radius:5px;
+    font-weight:500;
+}
+#opt1.active{
+    background:black;
+    color:white;
+}
+
+#opt2.active{
+    background:black;
+    color:white;
+}
+
+#opt3.active{
+    background:black;
+    color:white;
+}
+
+#opt4.active{
+    background:black;
+    color:white;
+}
+section .options .opt:hover{
+    background:black;
+    color:var(--textColor);
+    transition: 0.45s all linear;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0);
+    opacity:0.4;
+    border-radius:4px;
+}
+::-webkit-scrollbar{
+    opacity:0.4;
+    height:8px;
+    border-radius: 10px;
+}
+section .calc .matrix-table{
+    width:100%;
+    height:80%;
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Start of Determinant 2 by 2 box  */
+section .calc .matrix-table .fakedt2{
+    width: 40%;
+    height:80%;
+    padding:0;
+    display:block;
+}
+.view{
+    font-size:14px;
+    padding:10px;
+    position: absolute;
+    color:gray;
+    cursor:pointer;
+    display:none;
+}
+.view2{
+    font-size:14px;
+    padding:10px;
+    position: absolute;
+    color:gray;
+    cursor:pointer;
+    display:none;
+}
+section .calc .matrix-table .fakedt2 > .det2{
+    width:100%;
+    height:100%;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    border-radius:10px;
+    display:grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto;
+}
+section .calc .matrix-table .fakedt2 .det2 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+section .calc .matrix-table .fakedt2 .det2 .mtr1 > input{
+    width:50%;
+    height:40%;
+    outline:none;
+    border:none;
+    border-bottom: 2px dashed lightgray;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    margin:0;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+    font-size:1.4rem;
+    font-family: 'Poppins';
+    text-align:center;
+    caret-color: var(--borderColor);
+    font-weight: 700;
+}
+
+/* Start of Determinant 3 by 3 box  */
+section .calc .matrix-table .fakedt3{
+    width: 40%;
+    height:80%;
+    padding:0;
+    display:none;
+}
+section .calc .matrix-table .fakedt3 .det3{
+    display:grid;
+    width:100%;
+    height:100%;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    border-radius:10px;
+    grid-column-gap: 0px;
+    grid-template-columns: auto auto auto;
+    padding:0;
+}
+
+section .calc .matrix-table .fakedt3 .det3 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+section .calc .matrix-table .fakedt3 .det3 > .mtr1 > input{
+    width:60%;
+    height:60%;
+    outline:none;
+    border:0;
+    border-bottom: 2px dashed lightgray;
+}
+
+/* Start of Transpose 2 by 2 box  */
+section .calc .matrix-table .faketrans2{
+    width: 40%;
+    height:80%;
+    padding:0;
+    overflow:hidden;
+    display:none;
+}
+section .calc .matrix-table .faketrans2 > div{
+    width:100%;
+    height:100%;
+
+}
+section .calc .matrix-table .faketrans2 > .trans2{
+    width:100%;
+    height:100%;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    border-radius:10px;
+    display:grid;
+    grid-column-gap: 5px;
+    grid-template-columns: auto auto;
+}
+section .calc .matrix-table .faketrans2 .trans2 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+section .calc .matrix-table .faketrans2 .trans2 .mtr1 > input{
+    width:50%;
+    height:40%;
+    outline:none;
+    border:0;
+    border-bottom: 2px dashed lightgray;
+}
+/* End of Transpose 2 by 2 box  */
+
+/* Start of Transpose 3 by 3 box  */
+section .calc .matrix-table .faketrans3{
+    width: 40%;
+    height:80%;
+    padding:0;
+    display:none;
+}
+section .calc .matrix-table .faketrans3 .trans3{
+    display:grid;
+    width:100%;
+    height:100%;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    border-radius:10px;
+    grid-column-gap: 0px;
+    grid-template-columns: auto auto auto;
+    padding:0;
+}
+
+section .calc .matrix-table .faketrans3 .trans3 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+section .calc .matrix-table .faketrans3 .trans3 > .mtr1 > input{
+    width:60%;
+    height:60%;
+    outline:none;
+    border:0;
+    border-bottom: 2px dashed lightgray;
+}
+
+/* End of Transpose 3 by 3 box  */
+
+section .calc .matrix-soln{
+    width:100%;
+    height:20%;
+    text-align:center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+section .calc .matrix-soln > .answers{
+    width:20%;
+    height:60%;
+    border:none;
+    background:black;
+    color:var(--textColor);
+    font-family: 'Biryani', sans-serif;;
+    font-size:20px;
+    border-radius:1px;
+    transition: all 0.22s linear;
+}
+.answers:hover{
+    transform: scale(0.9);
+}
+#answer1{
+    display: block;
+}
+#answer2{
+    display: none;
+}
+#answer3{
+    display: none;
+}
+#answer4{
+    display: none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:600px){
+body{
+    display:block;   
+}
+:root{
+    --pageBackground: black;
+    --borderColor: #111029;
+    --textColor:#fff;
+    --fontFamilyMain:'Poppins';
+    --fontFamilyOther:'Big Shoulders Stencil Text'; 
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+/* body, html{
+    width:100%;
+    height:100%;
+    user-select: none;
+}
+body{
+    font-family: var(--fontFamilyMain);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+} */
+header > p{
+    font-size:0.2em;
+}
+aside{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0, 0.9);
+    position:fixed;
+    display:none;
+    padding:0;
+    margin:0;
+    z-index:9000000;
+}
+aside .display{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+aside .display .soln-box{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    
+}
+aside .display .soln-box .soln > p {
+    font-size:14px;
+}
+
+aside .display .soln-box > .soln > p > i{
+    color:black;
+    display:inline-block;
+    float:right;
+    font-size:14px;
+}
+aside .display .soln-box > .soln{
+        width:80%;
+        height:70%;
+        border-radius:2px;
+        margin-top:20px;
+        position: relative;
+}
+aside .display .soln-box .soln .type{
+    width:100%;
+    height:100%;
+    border-radius:0 0 2px 2px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: flex-start;
+}
+aside .display .soln-box .soln .type > div{
+    width:100%;
+    height:100%;
+    border-radius:0 0 2px 2px;
+}
+/* aside .display .soln-box .soln .type .xp1 > .explain{
+    width:100%;
+    height:100%;
+    border-radius:0;
+    background:white;
+    padding:20px;
+    overflow-y:auto;
+    border-radius:inherit;
+} */
+aside .display .soln-box .soln .type .xp2 > .answer{
+    width:100%;
+    height:30%;
+    border-radius:0px;    
+    padding:10px;
+}
+aside .display .soln-box .soln .type .xp2 > .explain{
+    width:100%;
+    height:70%;
+    padding:10px;
+    border-radius:inherit;
+    overflow-y:scroll;
+    position:relative;
+    text-align:left;
+}
+h3{    
+    text-decoration: underline;
+    font-size:16px;
+}
+.words{
+    line-height:30px;
+    padding-top:10px;
+}
+aside .display .soln-box .soln .type > .D2by2{
+    display:block;
+}
+
+aside .display .soln-box .soln .type > .D3by3{
+    background:white;
+    display:none;
+}
+aside .display .soln-box .soln .type > .T2by2{
+    overflow:hidden;
+    height:90%;
+    display:none;
+}
+aside .display .soln-box .soln .type .T2by2 .answer > .trans2{
+    width:50%;
+    height:100%;
+    border-left:2px solid black;
+    border-right:2px solid black;
+    border-radius:10px;
+    display:grid;
+    grid-column-gap: 5px;
+    grid-template-columns: auto auto;
+    margin:0% 30% auto;
+    position: relative;
+}
+/*
+aside .display .soln-box .soln .type .T2by2 .answer .trans2 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+aside .display .soln-box .soln .type .T2by2 .answer .trans2 .mtr1 > input{
+    width:50%;
+    height:40%;
+    outline:none;
+    border:0;
+    padding:5px;
+    border-bottom: 1px solid gray;
+} */
+aside .display .soln-box .soln .type > .T3by3{
+    display:none;
+    height:90%;
+    overflow-y: scroll;
+    padding:0;
+}
+
+aside .display .soln-box .soln .type .T3by3.xp2 > .answer{
+    height: 45%;
+}
+aside .display .soln-box .soln .type .T3by3.xp2 > .explain{
+    height:50%;
+    overflow-y:scroll;
+    line-height: 10px;
+    margin:0;
+    background:white;
+}
+aside .display .soln-box .soln .type .T3by3 .trans3{
+    display:grid;
+    width:50%;
+    height:100%;
+    border-left:2px solid black;
+    border-right:2px solid black;
+    border-radius:10px;
+    grid-column-gap: 0px;
+    grid-template-columns: auto auto auto;
+    padding:0;
+    margin:0% 30%;
+}
+
+aside .display .soln-box .soln .type .T3by3 .answer .trans3 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+aside .display .soln-box .soln .type .T3by3 .answer .trans3 .mtr1 > input{
+    width:60%;
+    height:60%;
+    outline:none;
+    border:0;
+    border-bottom: 2px dashed black;
+}
+
+/* header{
+    font-family:var(--fontFamilyOther);
+    width:100%;
+    height:15%;
+    padding:10px;
+    background:black;
+    color:var(--textColor);
+    box-shadow: 0px 1px 2px lightgray;
+} */
+header > p {
+    font-size:3.6rem;
+    text-align:center;
+    letter-spacing:20px;
+}
+
+section{
+    width:100%;
+    height:85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column-reverse;
+}
+section .calc{
+    width:100%;
+    height:80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section .options{
+    width:100%;
+    height:20%;
+    display:grid;
+    grid-template-columns: auto auto;
+    border-top:2px solid black;
+    padding-bottom: 0;
+    border:0;
+    /* background: red; */
+}
+section .options > .opt{
+    width:100%;
+    border:1px solid black;
+    font-weight:400;
+    padding:5px;
+    margin-top:20px;
+}
+/* #opt1.active{
+    background:black;
+    color:white;
+}
+
+#opt2.active{
+    background:black;
+    color:white;
+}
+
+#opt3.active{
+    background:black;
+    color:white;
+}
+
+#opt4.active{
+    background:black;
+    color:white;
+} */
+section .options .opt:hover{
+    background:black;
+    color:var(--textColor);
+    transition: 0.45s all linear;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0);
+    opacity:0.4;
+    border-radius:2px;
+}
+::-webkit-scrollbar{
+    opacity:0.4;
+    width:8px;
+    border-radius: 2px;
+}
+section .calc .matrix-table{
+    width:100%;
+    height:80%;
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Start of Determinant 2 by 2 box  */
+section .calc .matrix-table .fakedt2{
+    width: 80%;
+    height:80%;
+    padding:0;
+    display:block;
+}
+
+/*Explaination vutton for both matrix 2 and 3 deterrminant */
+.view{
+    font-size:14px;
+    padding:10px;
+    padding-top:0;
+}
+.view2{
+    font-size:14px;
+    padding:10px;
+    padding-top:0;
+}
+/* section .calc .matrix-table .fakedt2 > .det2{
+    width:100%;
+    height:100%;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    border-radius:10px;
+    display:grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto;
+}
+section .calc .matrix-table .fakedt2 .det2 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+section .calc .matrix-table .fakedt2 .det2 .mtr1 > input{
+    width:50%;
+    height:40%;
+    outline:none;
+    border:none;
+    border-bottom: 2px dashed lightgray;
+} */
+/* input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    margin:0;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+    font-size:1.4rem;
+    font-family: 'Poppins';
+    text-align:center;
+    caret-color: var(--borderColor);
+    font-weight: 700;
+} */
+
+/* Start of Determinant 3 by 3 box  */
+section .calc .matrix-table .fakedt3{
+    width: 80%;
+    height:80%;
+}
+/* section .calc .matrix-table .fakedt3 .det3{
+    display:grid;
+    width:100%;
+    height:100%;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    border-radius:10px;
+    grid-column-gap: 0px;
+    grid-template-columns: auto auto auto;
+    padding:0;
+}
+
+section .calc .matrix-table .fakedt3 .det3 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+section .calc .matrix-table .fakedt3 .det3 > .mtr1 > input{
+    width:60%;
+    height:60%;
+    outline:none;
+    border:0;
+    border-bottom: 2px dashed lightgray;
+} */
+
+/* Start of Transpose 2 by 2 box  */
+section .calc .matrix-table .faketrans2{
+    width: 80%;
+    height:80%;
+    padding:0;
+    overflow:hidden;
+    display:none;
+}
+/* section .calc .matrix-table .faketrans2 > div{
+    width:100%;
+    height:100%;
+
+}
+section .calc .matrix-table .faketrans2 > .trans2{
+    width:100%;
+    height:100%;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    border-radius:10px;
+    display:grid;
+    grid-column-gap: 5px;
+    grid-template-columns: auto auto;
+}
+section .calc .matrix-table .faketrans2 .trans2 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+section .calc .matrix-table .faketrans2 .trans2 .mtr1 > input{
+    width:50%;
+    height:40%;
+    outline:none;
+    border:0;
+    border-bottom: 2px dashed lightgray;
+} */
+/* End of Transpose 2 by 2 box  */
+
+/* Start of Transpose 3 by 3 box  */
+section .calc .matrix-table .faketrans3{
+    width: 80%;
+    height:80%;
+    padding:0;
+    display:none;
+}
+/* section .calc .matrix-table .faketrans3 .trans3{
+    display:grid;
+    width:100%;
+    height:100%;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    border-radius:10px;
+    grid-column-gap: 0px;
+    grid-template-columns: auto auto auto;
+    padding:0;
+}
+
+section .calc .matrix-table .faketrans3 .trans3 > div{
+    padding:0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+section .calc .matrix-table .faketrans3 .trans3 > .mtr1 > input{
+    width:60%;
+    height:60%;
+    outline:none;
+    border:0;
+    border-bottom: 2px dashed lightgray;
+} */
+
+/* End of Transpose 3 by 3 box  */
+
+section .calc .matrix-soln{
+    width:100%;
+    height:20%;
+    text-align:center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+section .calc .matrix-soln > .answers{
+    width:60%;
+    height:60%;
+}
+/* .answers:hover{
+    transform: scale(0.9);
+}
+#answer1{
+    display: block;
+}
+#answer2{
+    display: none;
+}
+#answer3{
+    display: none;
+}
+#answer4{
+    display: none;
+}
+
+};
+*/
+}
