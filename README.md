@@ -1,4 +1,4 @@
-# simple-matrix
+# Simple-matrix Calculator
 
 Do simple matrix operations like transpose and determnant with simple-matrix.
-made with love 🥰
+Made with love 🥰
